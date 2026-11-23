@@ -1,0 +1,6 @@
+{"seed":20261123,"note":"Truth = my fresh reading of vendor docs on 2026-11-23 (AI, not a human). Dims: auth set (O=OAuth2,K=key/token,N=none), tier, official MCP exists (Y/N), buildable (Y/N). Excluded: 37 (access unresolved), 44 (docs 403), 50 (no primary doc found), 84 (vendor ambiguous).",
+"truth":{
+"4":["OK","S1","Y","Y"],"6":["OK","S1","Y","Y"],"7":["O","S1","Y","Y"],"10":["OK","G2","Y","N"],"12":["OK","S1","Y","Y"],
+"13":["OK","S2","Y","Y"],"15":["K","G2","Y","N"],"21":["O","S1","Y","Y"],"23":["O","S1","Y","Y"],"24":["OK","S1","Y","Y"],
+"35":["OK","S1","N","Y"],"42":["K","S1","Y","Y"],"49":["O","G1","Y","N"],"55":["K","S1","Y","Y"],"60":["K","S1","Y","Y"],
+"64":["K","S1","Y","Y"],"70":["OK","S1","Y","Y"],"72":["OK","S1","Y","Y"],"74":["O","S1","Y","Y"],"97":["K","S2","Y","Y"],"98":["N","S1","Y","N"]}}

@@ -1,0 +1,1218 @@
+[
+ {
+  "n": 1,
+  "app": "Salesforce",
+  "auth": [
+   "OAuth2"
+  ],
+  "access": "self-serve",
+  "api": "GraphQL+REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 2,
+  "app": "HubSpot",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 3,
+  "app": "Pipedrive",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 4,
+  "app": "Attio",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 5,
+  "app": "Twenty",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "GraphQL+REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 6,
+  "app": "Podio",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 7,
+  "app": "Zoho CRM",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 8,
+  "app": "Close",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 9,
+  "app": "Copper",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 10,
+  "app": "DealCloud",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 11,
+  "app": "Zendesk",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 12,
+  "app": "Intercom",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 13,
+  "app": "Freshdesk",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 14,
+  "app": "Front",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 15,
+  "app": "Pylon",
+  "auth": [
+   "API key/token"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 16,
+  "app": "LiveAgent",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 17,
+  "app": "Plain",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "GraphQL+REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 18,
+  "app": "Help Scout",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 19,
+  "app": "Gorgias",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 20,
+  "app": "Gladly",
+  "auth": [
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 21,
+  "app": "Slack",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "unclear"
+ },
+ {
+  "n": 22,
+  "app": "Twilio",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 23,
+  "app": "Zoho Cliq",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 24,
+  "app": "Lark (Larksuite)",
+  "auth": [
+   "OAuth2"
+  ],
+  "access": "self-serve",
+  "api": "unknown",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 25,
+  "app": "Pumble",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 26,
+  "app": "Discord",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 27,
+  "app": "Telegram",
+  "auth": [
+   "OAuth2"
+  ],
+  "access": "self-serve",
+  "api": "unknown",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 28,
+  "app": "WhatsApp Business",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 29,
+  "app": "Aircall",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 30,
+  "app": "Vonage",
+  "auth": [
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 31,
+  "app": "Google Ads",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 32,
+  "app": "Meta Ads",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 33,
+  "app": "LinkedIn Ads",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 34,
+  "app": "GoHighLevel",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 35,
+  "app": "Mailchimp",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 36,
+  "app": "Klaviyo",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "unclear"
+ },
+ {
+  "n": 37,
+  "app": "systeme.io",
+  "auth": [
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 38,
+  "app": "Pinterest",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 39,
+  "app": "Threads (Meta)",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 40,
+  "app": "SendGrid",
+  "auth": [
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 41,
+  "app": "Shopify",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "gated",
+  "api": "GraphQL+REST",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 42,
+  "app": "WooCommerce",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 43,
+  "app": "BigCommerce",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "GraphQL+REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 44,
+  "app": "Salesforce Commerce Cloud",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 45,
+  "app": "Magento (Adobe Commerce)",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "GraphQL+REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 46,
+  "app": "Squarespace",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 47,
+  "app": "Ecwid",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 48,
+  "app": "Gumroad",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 49,
+  "app": "Amazon Selling Partner",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 50,
+  "app": "fanbasis",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 51,
+  "app": "DataForSEO",
+  "auth": [
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 52,
+  "app": "SE Ranking",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 53,
+  "app": "Ahrefs",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 54,
+  "app": "MrScraper",
+  "auth": [
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 55,
+  "app": "Apify",
+  "auth": [
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 56,
+  "app": "Firecrawl",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 57,
+  "app": "Bright Data",
+  "auth": [
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 58,
+  "app": "Sherlock",
+  "auth": [
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 59,
+  "app": "Waterfall.io",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 60,
+  "app": "Clay",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 61,
+  "app": "GitHub",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "GraphQL+REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 62,
+  "app": "Vercel",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 63,
+  "app": "Netlify",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 64,
+  "app": "Cloudflare",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 65,
+  "app": "Supabase",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 66,
+  "app": "Neo4j",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 67,
+  "app": "Snowflake",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 68,
+  "app": "MongoDB Atlas",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 69,
+  "app": "Datadog",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 70,
+  "app": "Sentry",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 71,
+  "app": "Notion",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 72,
+  "app": "Airtable",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 73,
+  "app": "Linear",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "GraphQL+REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 74,
+  "app": "Jira",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 75,
+  "app": "Asana",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 76,
+  "app": "Monday.com",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "GraphQL+REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 77,
+  "app": "ClickUp",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 78,
+  "app": "Coda",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 79,
+  "app": "Smartsheet",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 80,
+  "app": "Harvest",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 81,
+  "app": "Stripe",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 82,
+  "app": "Plaid",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 83,
+  "app": "Binance",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self-serve",
+  "api": "unknown",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 84,
+  "app": "Paygent Connect",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 85,
+  "app": "iPayX",
+  "auth": [
+   "unknown"
+  ],
+  "access": "self-serve",
+  "api": "unknown",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 86,
+  "app": "QuickBooks",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 87,
+  "app": "Xero",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 88,
+  "app": "Brex",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 89,
+  "app": "Ramp",
+  "auth": [
+   "OAuth2"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 90,
+  "app": "PitchBook",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 91,
+  "app": "NotebookLM",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 92,
+  "app": "Otter AI",
+  "auth": [
+   "OAuth2",
+   "API key/token",
+   "Basic"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 93,
+  "app": "Fathom",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 94,
+  "app": "Consensus",
+  "auth": [
+   "OAuth2"
+  ],
+  "access": "self-serve",
+  "api": "unknown",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 95,
+  "app": "Reducto",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 96,
+  "app": "Devin",
+  "auth": [
+   "API key/token"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 97,
+  "app": "higgsfield",
+  "auth": [
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ },
+ {
+  "n": 98,
+  "app": "Mermaid CLI",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "gated",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "unclear"
+ },
+ {
+  "n": 99,
+  "app": "YouTube Transcript",
+  "auth": [
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "unknown",
+  "buildable": "yes"
+ },
+ {
+  "n": 100,
+  "app": "Grain",
+  "auth": [
+   "OAuth2",
+   "API key/token"
+  ],
+  "access": "self-serve",
+  "api": "REST",
+  "mcp": "yes",
+  "buildable": "yes"
+ }
+]
