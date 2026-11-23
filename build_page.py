@@ -24,16 +24,20 @@ def appacc(m,total=21):
     bad={x[0] for x in m["misses"]}; return total-len(bad)
 data=json.dumps([{k:r[k] for k in ["n","app","cat","category","auth","tier","access","api","mcp","verdict","blocker","urls","conf"]} for r in R]).replace("</","<\\/")
 chrows="".join(f'<tr><td>{c["n"]}</td><td>{html.escape(c["app"])}</td><td>{"; ".join(html.escape(k)+": "+html.escape(v[0][:60])+" → "+html.escape(v[1][:60]) for k,v in c["changes"].items() if k in("tier","verdict","mcp","auth","app"))}</td><td>{html.escape(c["note"])}</td></tr>' for c in mat)
-# Human spot-check queue: 10 rows, one per category, prioritising low-confidence, gated,
-# flipped-by-verification and third-party-evidence rows. Results stay "pending" until a human checks them.
-SPOT_NS=[10,15,28,37,46,60,68,74,84,91]
+# Independent agent re-check (second pass) of 10 rows, from final/recheck.json (applied to final.json by apply_recheck.py).
+# This is an AI re-check, NOT human verification; the author's manual check is still pending.
+RC=json.load(open("final/recheck.json"))
+SPOT_NS=[x["n"] for x in RC["rows"]]
 by_n={int(r["n"]):r for r in R}
 def firsturl(u):
     for x in u.split(";"):
         x=x.strip()
         if x.startswith("http"): return x
     return ""
-spotrows="".join(f'<tr><td>{r["n"]}</td><td>{html.escape(r["app"])}</td><td>{html.escape(r["cat"])}</td><td><span class="pill {r["tier"]}">{r["tier"]}</span> {html.escape(r["verdict"])}</td><td>{r["conf"]}</td><td><a href="{html.escape(firsturl(r["urls"]))}" target="_blank" rel="noopener">vendor docs</a></td><td><b>pending</b></td></tr>' for r in (by_n[n] for n in SPOT_NS))
+def srclinks(x): return " ".join(f'<a href="{html.escape(u)}" target="_blank" rel="noopener">[{k+1}]</a>' for k,u in enumerate(x["sources"]))
+def rcpill(t): return "bl" if t.startswith("Disagree") else "ok"
+spotrows="".join(f'<tr><td>{x["n"]}</td><td>{html.escape(x["app"])}</td><td><span class="pill {rcpill(x["result"])}">{html.escape(x["result"])}</span></td><td><span class="pill {by_n[x["n"]]["tier"]}">{by_n[x["n"]]["tier"]}</span> {html.escape(by_n[x["n"]]["verdict"])}</td><td>{html.escape(x["summary"])}</td><td>{srclinks(x)}</td></tr>' for x in RC["rows"])
+nagree=sum(1 for x in RC["rows"] if x["result"].startswith("Agree")); ndis=len(RC["rows"])-nagree
 page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>100 apps: who lets an agent in? Auth, access and buildability research</title>
 <style>
@@ -65,9 +69,9 @@ code{{background:#eceff4;padding:1px 5px;border-radius:4px}}a{{color:#2a5db0}}ul
 <p class="legend"><span><i class="dot S1"></i>S1 free self-serve</span><span><i class="dot S2"></i>S2 trial or paid account</span><span><i class="dot G1"></i>G1 approval or app review</span><span><i class="dot G2"></i>G2 sales or partner contract</span></p>
 {catrows}
 <ul>
-<li><b>Easy wins ({ver["Ready"]} Ready, {ver["Ready with caveat"]} Ready with caveat):</b> Productivity/PM (10 of 10 ready), Developer/Infra (10 of 10), Comms (10 of 10, but WhatsApp and Aircall need extra steps), most CRMs.</li>
-<li><b>Needs outreach ({ver["Blocked until outreach"]}):</b> enterprise-only APIs (DealCloud, Pylon, Gladly, Salesforce Commerce Cloud, Otter, Waterfall.io), finance partners (Brex, Ramp, PitchBook), and review-gated ads/social/commerce (Meta Ads, LinkedIn Ads, Pinterest, Threads, Amazon SP-API). Another 6 are self-serve to start but gated for production (WhatsApp, Aircall, Google Ads, Plaid, QuickBooks, Xero).</li>
-<li><b>Not buildable as an API integration ({ver["Not API-buildable"]}):</b> Sherlock and Mermaid CLI are local CLIs, no hosted API. {ver["Not verified (vendor ambiguous)"]} app (Paygent Connect) is not verified because the vendor is ambiguous.</li>
+<li><b>Easy wins ({ver["Ready"]} Ready, {ver["Ready with caveat"]} Ready with caveat):</b> Productivity/PM (10 of 10 ready), Developer/Infra (10 of 10), Comms (10 of 10, but WhatsApp has a 250-recipient daily limit at first and Aircall needs extra steps), most CRMs.</li>
+<li><b>Needs outreach ({ver["Blocked until outreach"]}):</b> enterprise-only APIs (DealCloud, Pylon, Gladly, Salesforce Commerce Cloud, Otter, Waterfall.io), finance partners (Brex, Ramp, PitchBook), and review-gated ads/social/commerce (Meta Ads, LinkedIn Ads, Pinterest, Threads, Amazon SP-API). Another 5 are self-serve to start but gated for production (Aircall, Google Ads, Plaid, QuickBooks, Xero).</li>
+<li><b>Not buildable as an API integration ({ver["Not API-buildable"]}):</b> Sherlock and Mermaid CLI are local CLIs, no hosted API. {ver["Not verified (vendor ambiguous)"]} app (Paygent Connect) is not verified: pass 2 researched the wrong company, and the right one (gopaygent.com) has thin public docs.</li>
 <li><b>Pattern:</b> marketing/ads and finance are the most gated categories; dev tools and PM tools are almost all self-serve with a token.</li>
 </ul>
 
@@ -86,7 +90,7 @@ code{{background:#eceff4;padding:1px 5px;border-radius:4px}}a{{color:#2a5db0}}ul
 <div class="step"><b>6 Verify loop</b>Targeted searches and direct doc fetches on flagged apps; corrections logged old to new. <code>apply_corrections.py</code></div>
 <div class="step"><b>7 Audit</b>Seeded random sample of 25, fresh fetch, score vs truth. <code>verify.py</code></div>
 </div>
-<p><b>Where a human was needed.</b> (a) Getting the app list out of lazy-rendered Notion tables (I had to scroll a browser). (b) Disambiguating vendors when search returned a look-alike (Otter, Sherlock, Mermaid, Paygent, YouTube Transcript). (c) Judging gated vs paid (S2 vs G1) when docs are vague. (d) Sign-off on the 3 lowest-confidence rows. Steps 5 to 7 were done by an AI assistant working in the repo workspace, not by an unattended script: the scripts do search, fetch, baseline and scoring; the reading and judgement is the model. A human (Adarsh) has not yet spot-checked rows; the queue for that check is section 6.</p>
+<p><b>Where a human was needed.</b> (a) Getting the app list out of lazy-rendered Notion tables (I had to scroll a browser). (b) Disambiguating vendors when search returned a look-alike (Otter, Sherlock, Mermaid, Paygent, YouTube Transcript). (c) Judging gated vs paid (S2 vs G1) when docs are vague. (d) Sign-off on the 3 lowest-confidence rows. Steps 5 to 7 were done by an AI assistant working in the repo workspace, not by an unattended script: the scripts do search, fetch, baseline and scoring; the reading and judgement is the model. A human (Adarsh) has not yet spot-checked rows. Ten rows got an independent agent re-check (second pass), which is not a human check; see section 6.</p>
 
 <h2>4. Proof</h2>
 <p>Every number above is computed from <code>final/final.json</code>; run <code>python3 verify.py</code> and <code>python3 build_page.py</code> in the repo to reproduce the accuracy table and this page from the data. The full pipeline (<code>search.py</code> then <code>fetch_evidence.py</code>, <code>pass1_rules.py</code>, review, <code>apply_corrections.py</code>, <code>verify.py</code>) needs a search API key and an LLM; see the README. Each table row links to the vendor page it relied on.</p>
@@ -102,20 +106,20 @@ code{{background:#eceff4;padding:1px 5px;border-radius:4px}}a{{color:#2a5db0}}ul
 <h3>Corrections the verification loop made (old to new)</h3>
 <div class="tw"><table><thead><tr><th>#</th><th>App</th><th>Change</th><th>Why</th></tr></thead><tbody>{chrows}</tbody></table></div>
 
-<h2>6. Human spot-check (pending)</h2>
-<div class="note"><b>Status: pending, not passed.</b> The assignment asks for human checks on top of the agent's verification loops. These 10 rows, one per category, are the ones most worth a human's time: lowest confidence, gated on third-party evidence, or changed by the verification loop. The author will check each by hand against the linked vendor docs. Every result cell says "pending" because no human result exists yet; this table gets updated with what the check finds, including disagreements and the fixes they cause.</div>
-<table><thead><tr><th>#</th><th>App</th><th>Category</th><th>Agent's claim (tier, verdict)</th><th>Conf.</th><th>Check against</th><th>Human check result</th></tr></thead><tbody>{spotrows}</tbody></table>
-<p class="small">Method per row: open the linked vendor page, find the line that states the auth method and the access requirement, compare with the claim, mark agree or disagree, and fix the row if wrong.</p>
+<h2>6. Independent agent re-check (second pass); human check pending</h2>
+<div class="note"><b>Status: this is an agent re-check, not human verification.</b> On 23 Nov 2026 a second AI agent re-read the official vendor docs for 10 rows from scratch (one per category, chosen as the lowest-confidence, gated, flipped-by-verification or third-party-evidence rows) and compared them with the pass-3 claims: auth type, access gate, official MCP, and whether the evidence supports the claim. Result: <b>{nagree} agree, {ndis} disagree</b> (WhatsApp Business: tier and MCP corrected; Paygent Connect: wrong vendor found). Corrections are applied in the data and the table in section 2. <b>The author's own manual check of these rows is still pending</b> and will be added when done. Both the original research and this re-check are AI work, so they share blind spots; neither replaces a human reading the docs.</div>
+<table><thead><tr><th>#</th><th>App</th><th>Re-check result</th><th>Claim now (tier, verdict)</th><th>What the re-check found and changed</th><th>Sources</th></tr></thead><tbody>{spotrows}</tbody></table>
+<p class="small">Method per row: fetch the vendor's own pages fresh (auth, pricing or plan, MCP), ignore the earlier agent's notes, mark agree or disagree, and correct the row. Old and new values are in <code>final/recheck_log.json</code>; the full record is <code>final/recheck.json</code>; <code>apply_recheck.py</code> applies it. The accuracy table in section 5 is unchanged: it scores the original 25-app audit sample, not these rows.</p>
 
 <h2>7. Where the agent was wrong or an app defeated it</h2>
 <ul>
 <li><b>Wrong vendor from search:</b> Otter (hit a food-delivery product), Mermaid (datamermaid.org), Sherlock (AI products), YouTube Transcript (look-alikes). Caught at review, not by the script.</li>
-<li><b>Paygent Connect: unresolved.</b> The list hint says "NMI-powered". I found Paygent products that are AI-agent wallets, not NMI gateways. The row is marked not verified.</li>
+<li><b>Paygent Connect: wrong vendor in pass 2.</b> The list hint says "NMI-powered". Pass 2 researched withpaygent.com (an AI usage-billing SDK). The second-pass re-check found gopaygent.com/products/connect, an NMI-based payments API with thin public docs, moved it to G1 and kept it not verified.</li>
 <li><b>Copper MCP</b> was reported as a live MCP in pass 2; the vendor page says "coming soon".</li>
-<li><b>WhatsApp Business</b> was "Blocked until outreach" in pass 2; Meta's docs show a self-serve test token, so it is now "Ready with caveat" (production needs business verification).</li>
-<li><b>Tier flips:</b> Squarespace (G1 to S2: paid plan, not review), Neo4j Aura (S1 to S2: card on file), QuickBooks (S1 to G1 for production: assessment), MrScraper (S2 to S1), YouTube Transcript (S2 to S1), Clay (S2 to S1).</li>
+<li><b>WhatsApp Business</b> was "Blocked until outreach" in pass 2, then "Ready with caveat" at G1 in pass 3. The second-pass re-check moved it to S2: direct developers need no App Review, business verification only raises the 250-recipient daily limit, and messages are paid per delivery. Meta also runs an official WhatsApp MCP server.</li>
+<li><b>Tier flips:</b> Squarespace (G1 to S2: paid plan, not review), WhatsApp Business (G1 to S2 in the second-pass re-check), Neo4j Aura (S1 to S2: card on file), QuickBooks (S1 to G1 for production: assessment), MrScraper (S2 to S1), YouTube Transcript (S2 to S1), Clay (S2 to S1).</li>
 <li><b>Pages the fetcher could not read:</b> Lark docs (JS-rendered), Salesforce Commerce Cloud docs (403), Binance docs (JS). These rely on search excerpts or other pages.</li>
-<li><b>Third-party only:</b> DealCloud and Pylon being sales-gated rests on G2 and vendor-adjacent pages, not an official statement. Pylon says "trial via sales" (third party).</li>
+<li><b>DealCloud and Pylon:</b> pass 3 rested on third-party pages. The second-pass re-check found Pylon's own pricing FAQ (trials via sales, no free plan) and DealCloud's demo-request-only site; both stay G2.</li>
 <li><b>Noise:</b> a repeated odd snippet on several fetched vendor pages claimed "free tier, no form"; I treated it as unreliable and ignored it.</li>
 <li><b>Not done:</b> No live API calls were made to apps to prove access. Everything is from docs, which can be stale or wrong.</li>
 </ul>
