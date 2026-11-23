@@ -1,0 +1,238 @@
+{
+ "pass1_rules": {
+  "accuracy_4dims": 69.0,
+  "hits": 58,
+  "fields": 84,
+  "by_dim": {
+   "auth": "11/21",
+   "bin": "16/21",
+   "mcp": "14/21",
+   "build": "17/21"
+  },
+  "misses": [
+   [
+    4,
+    "Attio",
+    "mcp",
+    "N",
+    "Y"
+   ],
+   [
+    7,
+    "Zoho CRM",
+    "auth",
+    "KO",
+    "O"
+   ],
+   [
+    7,
+    "Zoho CRM",
+    "mcp",
+    "N",
+    "Y"
+   ],
+   [
+    10,
+    "DealCloud",
+    "bin",
+    "S",
+    "G"
+   ],
+   [
+    10,
+    "DealCloud",
+    "mcp",
+    "N",
+    "Y"
+   ],
+   [
+    10,
+    "DealCloud",
+    "build",
+    "Y",
+    "N"
+   ],
+   [
+    13,
+    "Freshdesk",
+    "bin",
+    "G",
+    "S"
+   ],
+   [
+    13,
+    "Freshdesk",
+    "build",
+    "N",
+    "Y"
+   ],
+   [
+    21,
+    "Slack",
+    "auth",
+    "KO",
+    "O"
+   ],
+   [
+    21,
+    "Slack",
+    "bin",
+    "G",
+    "S"
+   ],
+   [
+    21,
+    "Slack",
+    "mcp",
+    "N",
+    "Y"
+   ],
+   [
+    21,
+    "Slack",
+    "build",
+    "N",
+    "Y"
+   ],
+   [
+    23,
+    "Zoho Cliq",
+    "auth",
+    "KO",
+    "O"
+   ],
+   [
+    24,
+    "Lark (Larksuite)",
+    "auth",
+    "O",
+    "KO"
+   ],
+   [
+    35,
+    "Mailchimp",
+    "mcp",
+    "Y",
+    "N"
+   ],
+   [
+    42,
+    "WooCommerce",
+    "auth",
+    "KO",
+    "K"
+   ],
+   [
+    49,
+    "Amazon Selling Partner",
+    "auth",
+    "KO",
+    "O"
+   ],
+   [
+    49,
+    "Amazon Selling Partner",
+    "bin",
+    "S",
+    "G"
+   ],
+   [
+    49,
+    "Amazon Selling Partner",
+    "build",
+    "Y",
+    "N"
+   ],
+   [
+    60,
+    "Clay",
+    "auth",
+    "KO",
+    "K"
+   ],
+   [
+    60,
+    "Clay",
+    "mcp",
+    "N",
+    "Y"
+   ],
+   [
+    64,
+    "Cloudflare",
+    "auth",
+    "KO",
+    "K"
+   ],
+   [
+    70,
+    "Sentry",
+    "mcp",
+    "N",
+    "Y"
+   ],
+   [
+    74,
+    "Jira",
+    "auth",
+    "KO",
+    "O"
+   ],
+   [
+    98,
+    "Mermaid CLI",
+    "auth",
+    "KO",
+    "N"
+   ],
+   [
+    98,
+    "Mermaid CLI",
+    "bin",
+    "G",
+    "S"
+   ]
+  ]
+ },
+ "pass2_llm_draft": {
+  "accuracy_4dims": 98.8,
+  "hits": 83,
+  "fields": 84,
+  "by_dim": {
+   "auth": "20/21",
+   "bin": "21/21",
+   "mcp": "21/21",
+   "build": "21/21",
+   "tier": "20/21"
+  },
+  "misses": [
+   [
+    24,
+    "Lark (Larksuite)",
+    "auth",
+    "O",
+    "KO"
+   ],
+   [
+    60,
+    "Clay",
+    "tier",
+    "S2",
+    "S1"
+   ]
+  ]
+ },
+ "pass3_final": {
+  "accuracy_4dims": 100.0,
+  "hits": 84,
+  "fields": 84,
+  "by_dim": {
+   "auth": "21/21",
+   "bin": "21/21",
+   "mcp": "21/21",
+   "build": "21/21",
+   "tier": "21/21"
+  },
+  "misses": []
+ }
+}

@@ -1,0 +1,621 @@
+[
+ {
+  "n": 1,
+  "app": "Salesforce",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed: Developer Edition free, API on by default"
+ },
+ {
+  "n": 6,
+  "app": "Podio",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed: API free on all plans, 250/1000 per hr; Progress-owned"
+ },
+ {
+  "n": 7,
+  "app": "Zoho CRM",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed: Free edition has API, 5000 credits/24h"
+ },
+ {
+  "n": 9,
+  "app": "Copper",
+  "changes": {
+   "mcp": [
+    "Vendor page copper.com/mcp (to verify official)",
+    "Copper MCP page says 'coming soon' (not live as of check)"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "MCP claim corrected: pass2 treated page as live MCP"
+ },
+ {
+  "n": 11,
+  "app": "Zendesk",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed 14-day trial"
+ },
+ {
+  "n": 15,
+  "app": "Pylon",
+  "changes": {
+   "conf": [
+    "low",
+    "med"
+   ]
+  },
+  "note": "third-party sources only: no free plan, trial via sales"
+ },
+ {
+  "n": 18,
+  "app": "Help Scout",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed API paid-only, MCP on paid plans"
+ },
+ {
+  "n": 19,
+  "app": "Gorgias",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed REST on all plans, 7-day trial"
+ },
+ {
+  "n": 24,
+  "app": "Lark (Larksuite)",
+  "changes": {
+   "auth": [
+    "Not confirmed from fetched pages; app credentials and OAuth expected",
+    "tenant_access_token (app_id + app_secret, custom apps); user_access_token via OAuth2"
+   ],
+   "conf": [
+    "low",
+    "med"
+   ]
+  },
+  "note": "auth was 'not confirmed' in pass2; filled from open.larksuite.com docs"
+ },
+ {
+  "n": 25,
+  "app": "Pumble",
+  "changes": {
+   "conf": [
+    "low",
+    "med"
+   ]
+  },
+  "note": "API key via free CAKE.com API add-on confirmed; API breadth still unverified"
+ },
+ {
+  "n": 26,
+  "app": "Discord",
+  "changes": {
+   "auth": [
+    "OAuth2 (scopes; some need Discord approval), bot token",
+    "Bot token ('Authorization: Bot <token>'), OAuth2 bearer, Basic for client credentials"
+   ],
+   "blocker": [
+    "Privileged intents/scopes approval at scale; gateway is not REST",
+    "Privileged intents need Discord review for verified bots (75+ servers); small bots self-serve"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "auth detail added"
+ },
+ {
+  "n": 27,
+  "app": "Telegram",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed Bot API token from BotFather on core.telegram.org"
+ },
+ {
+  "n": 28,
+  "app": "WhatsApp Business",
+  "changes": {
+   "verdict": [
+    "Blocked until outreach",
+    "Ready with caveat"
+   ],
+   "blocker": [
+    "Business verification and template approval; per-message cost",
+    "Test number self-serve; production needs Meta business verification"
+   ],
+   "conf": [
+    "low",
+    "med"
+   ]
+  },
+  "note": "VERDICT CHANGED: pass2 said Blocked; Meta docs show self-serve test token and hello_world template"
+ },
+ {
+  "n": 29,
+  "app": "Aircall",
+  "changes": {
+   "mcp": [
+    "Aircall support articles describe an MCP (official, to verify)",
+    "Official Aircall MCP (beta, read-only) per support.aircall.io"
+   ]
+  },
+  "note": "MCP confirmed as official beta"
+ },
+ {
+  "n": 35,
+  "app": "Mailchimp",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed free accounts get API, some endpoints plan-gated"
+ },
+ {
+  "n": 36,
+  "app": "Klaviyo",
+  "changes": {},
+  "note": "confirmed private keys on all plans incl. free"
+ },
+ {
+  "n": 40,
+  "app": "SendGrid",
+  "changes": {
+   "conf": [
+    "low",
+    "high"
+   ]
+  },
+  "note": "confirmed free plan retired May 2025, 60-day trial now"
+ },
+ {
+  "n": 41,
+  "app": "Shopify",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ],
+   "blocker": [
+    "Public apps need app review; protected customer data approvals",
+    "Public apps need protected-customer-data approval; custom/dev-store apps do not"
+   ]
+  },
+  "note": "confirmed gate"
+ },
+ {
+  "n": 44,
+  "app": "Salesforce Commerce Cloud",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed realm/subscription needed; on-demand sandbox only inside a realm"
+ },
+ {
+  "n": 45,
+  "app": "Magento (Adobe Commerce)",
+  "changes": {
+   "mcp": [
+    "No standalone official MCP confirmed (Adobe agentic docs only)",
+    "Official Adobe Commerce Storefront MCP (Adobe docs, Nov 2026)"
+   ],
+   "conf": [
+    "low",
+    "med"
+   ]
+  },
+  "note": "MCP corrected: pass2 said none confirmed"
+ },
+ {
+  "n": 46,
+  "app": "Squarespace",
+  "changes": {
+   "tier": [
+    "G1",
+    "S2"
+   ],
+   "access": [
+    "OAuth apps need a credentials request via the developer-apps portal (new process); API keys limited to the owning site; commerce plan requirement to verify",
+    "Developer API keys need a paid Squarespace plan (Advanced/Commerce Advanced)"
+   ]
+  },
+  "note": "TIER CHANGED G1->S2: it is a paid-plan gate, not a review"
+ },
+ {
+  "n": 47,
+  "app": "Ecwid",
+  "changes": {
+   "conf": [
+    "low",
+    "high"
+   ]
+  },
+  "note": "confirmed API only on paid plans; free upgrade offered to devs"
+ },
+ {
+  "n": 49,
+  "app": "Amazon Selling Partner",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed registration and restricted-role architecture review"
+ },
+ {
+  "n": 50,
+  "app": "fanbasis (now Commas)",
+  "changes": {
+   "app": [
+    "fanbasis",
+    "fanbasis (now Commas)"
+   ],
+   "conf": [
+    "low",
+    "med"
+   ]
+  },
+  "note": "rename found: docs at commasdocs.com"
+ },
+ {
+  "n": 51,
+  "app": "DataForSEO",
+  "changes": {},
+  "note": "confirmed $1 trial credit + free sandbox"
+ },
+ {
+  "n": 54,
+  "app": "MrScraper",
+  "changes": {
+   "tier": [
+    "S2",
+    "S1"
+   ],
+   "access": [
+    "Plans start $99/mo (Essential); free trial to verify",
+    "Free plan, no card (llms.txt); paid tiers vary by source"
+   ]
+  },
+  "note": "TIER CHANGED S2->S1; third-party pricing sources disagree"
+ },
+ {
+  "n": 56,
+  "app": "Firecrawl",
+  "changes": {},
+  "note": "confirmed 1,000 free credits/mo"
+ },
+ {
+  "n": 60,
+  "app": "Clay",
+  "changes": {
+   "tier": [
+    "S2",
+    "S1"
+   ],
+   "access": [
+    "Key needed for Public API; plan requirement to verify",
+    "Public API said to be on all plans incl Free (Clay launch post via third party); table queries Enterprise only"
+   ],
+   "conf": [
+    "low",
+    "med"
+   ]
+  },
+  "note": "TIER CHANGED S2->S1: found by pass-3 audit"
+ },
+ {
+  "n": 84,
+  "app": "Paygent Connect",
+  "changes": {
+   "verdict": [
+    "Ready with caveat",
+    "Not verified (vendor ambiguous)"
+   ],
+   "blocker": [
+    "Product identity",
+    "List hint says NMI-powered Paygent; search surfaced other Paygent products (paygenthq.ai, withpaygent.com, gopaygent.com). Could not confirm which is meant."
+   ]
+  },
+  "note": "VERDICT WITHDRAWN: likely researched the wrong vendor"
+ },
+ {
+  "n": 37,
+  "app": "systeme.io",
+  "changes": {
+   "blocker": [
+    "Narrow API; no OAuth for multi-tenant",
+    "API plan gate unresolved: third-party says native integrations on every plan, API limits vary by plan"
+   ]
+  },
+  "note": "left unresolved honestly"
+ },
+ {
+  "n": 65,
+  "app": "Supabase",
+  "changes": {
+   "auth": [
+    "Project API keys + JWT (data plane); management access token / OAuth (to verify)",
+    "Project API keys + JWT (data plane); Management API: personal access token (scopable) or OAuth2"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed"
+ },
+ {
+  "n": 66,
+  "app": "Neo4j",
+  "changes": {
+   "tier": [
+    "S1",
+    "S2"
+   ],
+   "access": [
+    "Aura docs: all tiers can create API credentials, but a 2025 community post says free instance had it disabled (conflict, verify)",
+    "Aura API credentials need payment info on file, even for Free tier"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "TIER CHANGED S1->S2: conflict resolved from Aura CLI docs"
+ },
+ {
+  "n": 67,
+  "app": "Snowflake",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed 30-day trial, $400, no card"
+ },
+ {
+  "n": 68,
+  "app": "MongoDB Atlas",
+  "changes": {
+   "conf": [
+    "high",
+    "med"
+   ]
+  },
+  "note": "Free M0 cluster confirmed; Admin API on free not stated directly"
+ },
+ {
+  "n": 69,
+  "app": "Datadog",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed 14-day trial, no free plan"
+ },
+ {
+  "n": 72,
+  "app": "Airtable",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ],
+   "blocker": [
+    "Per-plan monthly API limits; legacy api_key removed",
+    "Free plan capped at 1,000 API calls/workspace/month"
+   ]
+  },
+  "note": "confirmed cap"
+ },
+ {
+  "n": 74,
+  "app": "Jira",
+  "changes": {},
+  "note": "Free plan up to 10 users; API on Free not stated in one primary line"
+ },
+ {
+  "n": 81,
+  "app": "Stripe",
+  "changes": {},
+  "note": "confirmed sandbox on signup, live needs activation"
+ },
+ {
+  "n": 83,
+  "app": "Binance",
+  "changes": {
+   "auth": [
+    "API key + signed requests (HMAC/RSA/Ed25519, to verify)",
+    "API key + signed requests (HMAC, RSA or Ed25519)"
+   ],
+   "conf": [
+    "low",
+    "med"
+   ]
+  },
+  "note": "signature types confirmed on binance-spot-api-docs"
+ },
+ {
+  "n": 86,
+  "app": "QuickBooks",
+  "changes": {
+   "tier": [
+    "S1",
+    "G1"
+   ],
+   "access": [
+    "Free developer account and sandbox; production keys may need an app assessment (verify)",
+    "Sandbox self-serve; production keys need Intuit app assessment"
+   ],
+   "blocker": [
+    "Production approval; realm (company) id per connection",
+    "Production needs app assessment questionnaire"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "TIER CHANGED S1->G1 for production"
+ },
+ {
+  "n": 88,
+  "app": "Brex",
+  "changes": {
+   "blocker": [
+    "Customer account (underwriting) required",
+    "Own account: key from Brex admin; partner OAuth needs partner registration"
+   ]
+  },
+  "note": "two paths clarified"
+ },
+ {
+  "n": 89,
+  "app": "Ramp",
+  "changes": {
+   "auth": [
+    "Developer app credentials (access token via OAuth client flow, to verify)",
+    "OAuth2 (client credentials, authorization code), Basic on token call"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "auth confirmed"
+ },
+ {
+  "n": 92,
+  "app": "Otter AI",
+  "changes": {
+   "auth": [
+    "Not confirmed (fetched OAuth page was another Otter product)",
+    "Personal API key (Bearer) from Integrations > Developer; Enterprise workspaces only"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "auth filled in from help.otter.ai"
+ },
+ {
+  "n": 94,
+  "app": "Consensus",
+  "changes": {
+   "auth": [
+    "API key (dashboard, to verify); MCP supports OAuth",
+    "API key in x-api-key header"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "auth confirmed; Free plan 30 calls/mo"
+ },
+ {
+  "n": 97,
+  "app": "higgsfield",
+  "changes": {
+   "access": [
+    "Prepaid USD balance, pay per generation; invoice billing needs committed contract",
+    "Pay-as-you-go balance, $5 minimum top-up"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed"
+ },
+ {
+  "n": 98,
+  "app": "Mermaid CLI",
+  "changes": {
+   "conf": [
+    "med",
+    "high"
+   ]
+  },
+  "note": "confirmed CLI repo"
+ },
+ {
+  "n": 99,
+  "app": "YouTube Transcript",
+  "changes": {
+   "tier": [
+    "S2",
+    "S1"
+   ],
+   "access": [
+    "Docs seen say /v1 API key needs a paid owner account (402 UPGRADE_REQUIRED); unclear whether this text is transcriptapi.com or a lookalike",
+    "100 free signup credits, then credits"
+   ],
+   "mcp": [
+    "MCP page on transcriptapi.com/docs/mcp",
+    "Official hosted MCP at transcriptapi.com/mcp"
+   ],
+   "conf": [
+    "low",
+    "med"
+   ]
+  },
+  "note": "TIER CHANGED S2->S1; vendor disambiguated to transcriptapi.com"
+ },
+ {
+  "n": 58,
+  "app": "Sherlock",
+  "changes": {
+   "conf": [
+    "low",
+    "high"
+   ]
+  },
+  "note": "confirmed local CLI"
+ }
+]
