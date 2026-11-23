@@ -1,0 +1,244 @@
+[
+ {
+  "n": 10,
+  "app": "DealCloud",
+  "result": "Agree",
+  "changes": {
+   "auth": [
+    "OAuth2 client credentials, API key, others per docs",
+    "API key (user profile > API Key, user group needs the API capability) exchanged for an OAuth2 client-credentials bearer token (15 min expiry); MCP uses per-user OAuth"
+   ],
+   "mcp": [
+    "Vendor docs list MCP (api.docs.dealcloud.com/mcp)",
+    "Official DealCloud MCP server (vendor docs); needs Celeste license, admin-enabled MCP access"
+   ],
+   "urls": [
+    "https://api.docs.dealcloud.com/docs/apikeys;https://api.docs.dealcloud.com/mcp",
+    "https://api.docs.dealcloud.com/docs/apikeys;https://api.docs.dealcloud.com/docs/token;https://api.docs.dealcloud.com/mcp;https://api.docs.dealcloud.com/mcp/getting-started;https://www.intapp.com/block/schedule-a-demo-dealcloud/"
+   ]
+  }
+ },
+ {
+  "n": 15,
+  "app": "Pylon",
+  "result": "Agree",
+  "changes": {
+   "access": [
+    "Token created in Settings > API Tokens by admin; no public free signup found",
+    "API token created by a Pylon admin (Settings > Integrations & dev > API). Pylon's pricing FAQ: trials are set up by a sales rep, no free plan, so no self-serve signup"
+   ],
+   "mcp": [
+    "Official MCP (docs.usepylon.com)",
+    "Official Pylon MCP server (OAuth or API token; the identity needs MCP Access)"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ],
+   "urls": [
+    "https://docs.usepylon.com/pylon-docs/developer/api/authentication;https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp",
+    "https://docs.usepylon.com/pylon-docs/developer/api/authentication;https://docs.usepylon.com/pylon-docs/integrations/pylon-mcp;https://www.usepylon.com/pricing"
+   ]
+  }
+ },
+ {
+  "n": 28,
+  "app": "WhatsApp Business",
+  "result": "Disagree",
+  "changes": {
+   "tier": [
+    "G1",
+    "S2"
+   ],
+   "auth": [
+    "Bearer access tokens (system user / business tokens) from a Meta app",
+    "Bearer access tokens: temporary user token from the App Dashboard for a first test message, then a long-lived System User token (business_management, whatsapp_business_management, whatsapp_business_messaging)"
+   ],
+   "access": [
+    "Needs Meta app, business portfolio, phone number; business verification for production; pay per message",
+    "Self-serve: Meta developer account, Meta app with WhatsApp use case, business portfolio, then send from API Setup. Direct developers get Standard Access with no App Review. Messages are charged per delivered message. New portfolios are limited to 250 unique business-initiated recipients per 24h until verified or scaled"
+   ],
+   "mcp": [
+    "Meta MCP doc exists (developers.facebook.com/documentation/mcp), WhatsApp scope unverified",
+    "Official remote WhatsApp Business Tools MCP (mcp.facebook.com/whatsapp_business_tools, per Meta's MCP docs)"
+   ],
+   "blocker": [
+    "Test number self-serve; production needs Meta business verification",
+    "Daily messaging limit of 250 for new portfolios; per-message charges; outbound outreach must use approved templates"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ],
+   "urls": [
+    "https://developers.facebook.com/docs/whatsapp;https://developers.facebook.com/documentation/mcp;https://whatsappbusiness.com/resources/faq/",
+    "https://developers.facebook.com/documentation/business-messaging/whatsapp/get-started;https://developers.facebook.com/documentation/business-messaging/whatsapp/access-tokens;https://developers.facebook.com/documentation/business-messaging/whatsapp/messaging-limits;https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing;https://developers.facebook.com/docs/whatsapp/embedded-signup/app-review/;https://developers.facebook.com/documentation/mcp"
+   ]
+  }
+ },
+ {
+  "n": 37,
+  "app": "systeme.io",
+  "result": "Agree (tier still unconfirmed)",
+  "changes": {
+   "auth": [
+    "Public API key (header) from dashboard; no OAuth seen",
+    "Public API key sent in the X-API-Key header (Settings > MCP & API keys; up to 3 keys, optional expiry); no OAuth"
+   ],
+   "access": [
+    "Key from Settings > Public API keys of an account; plan requirement to verify",
+    "Key from Settings > MCP & API keys in any account. Official help and API docs state no plan requirement, and a free plan exists (no card). A plan limit on API use is not explicitly ruled out"
+   ],
+   "mcp": [
+    "Vendor MCP page (systeme.io/mcp)",
+    "Official built-in systeme.io MCP server (separate MCP key from account settings; vendor page says included at no extra cost)"
+   ],
+   "blocker": [
+    "API plan gate unresolved: third-party says native integrations on every plan, API limits vary by plan",
+    "Plan gating of the API not stated in official docs, so unresolved; not live-tested. Small API (contacts, tags, courses, orders, funnels, newsletters)"
+   ],
+   "urls": [
+    "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io;https://systeme.io/mcp",
+    "https://help.systeme.io/article/2323-how-to-create-a-public-api-key-on-systeme-io;https://developer.systeme.io/reference/api;https://systeme.io/mcp;https://systeme.io/pricing"
+   ]
+  }
+ },
+ {
+  "n": 46,
+  "app": "Squarespace",
+  "result": "Agree (minor correction)",
+  "changes": {
+   "access": [
+    "Developer API keys need a paid Squarespace plan (Advanced/Commerce Advanced)",
+    "Developer API keys need the Commerce Advanced plan (Squarespace docs). OAuth is for extension developers on any plan, after Squarespace approves the OAuth client"
+   ],
+   "mcp": [
+    "Official MCP (developers.squarespace.com/mcp)",
+    "Official Squarespace MCP (mcp.squarespace.com/mcp); Domains tools need no sign-in, Commerce tools need sign-in and currently work only in Claude and ChatGPT"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ]
+  }
+ },
+ {
+  "n": 60,
+  "app": "Clay",
+  "result": "Agree",
+  "changes": {
+   "access": [
+    "Public API said to be on all plans incl Free (Clay launch post via third party); table queries Enterprise only",
+    "Public API and CLI are available on all Clay plans including Free (Clay's own docs). Free plan: 100 search results per 30 days; calls use the same credits as in-product work; structured table queries are Enterprise only"
+   ],
+   "blocker": [
+    "Plan gating of Public API unverified; small API",
+    "Small API (searches, routines, read-only tables); free-plan result limit; credits consumed"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ],
+   "urls": [
+    "https://developers.clay.com/public-api/authentication;https://www.clay.com/mcp",
+    "https://developers.clay.com/public-api/authentication;https://university.clay.com/docs/clay-api-cli;https://www.clay.com/mcp"
+   ]
+  }
+ },
+ {
+  "n": 68,
+  "app": "MongoDB Atlas",
+  "result": "Agree",
+  "changes": {
+   "mcp": [
+    "Official MCP server (mongodb.com/docs/mcp-server)",
+    "Official MongoDB MCP Server: local (self-run) or Atlas Managed MCP Server (public preview)"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ]
+  }
+ },
+ {
+  "n": 74,
+  "app": "Jira",
+  "result": "Agree",
+  "changes": {
+   "mcp": [
+    "Official Atlassian Rovo MCP server",
+    "Official Atlassian Rovo MCP server (OAuth 2.1; API token auth if an admin enables it)"
+   ],
+   "access": [
+    "Free Jira Cloud plan exists (verify); OAuth apps self-service, Atlassian review to scale rate limits per third-party",
+    "Free Jira Cloud plan (up to 10 users, Atlassian support docs); OAuth 3LO apps are created self-serve in the developer console"
+   ],
+   "conf": [
+    "med",
+    "high"
+   ],
+   "urls": [
+    "https://developer.atlassian.com/cloud/rovo-mcp/;https://developers.apideck.com/apis/project-management/jira/overview",
+    "https://developer.atlassian.com/cloud/rovo-mcp/;https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/;https://support.atlassian.com/jira-cloud-administration/docs/explore-jira-cloud-plans/;https://support.atlassian.com/atlassian-ai-gateway/docs/configure-authentication-via-api-token/"
+   ]
+  }
+ },
+ {
+  "n": 84,
+  "app": "Paygent Connect",
+  "result": "Disagree",
+  "changes": {
+   "category": [
+    "Agent payments (name ambiguous across vendors)",
+    "Embedded payments API (NMI-based, gopaygent.com)"
+   ],
+   "auth": [
+    "API key (pg_live_...), token exchange for Connect flow",
+    "Not confirmed: Paygent's public docs state no auth scheme. NMI's sandbox issues partner and merchant test keys"
+   ],
+   "tier": [
+    "S1",
+    "G1"
+   ],
+   "access": [
+    "Several unrelated 'Paygent' products found, need disambiguation",
+    "Paygent Connect (gopaygent.com/products/connect) onboards merchants through underwriting; public docs cover Collect.js, the Pathfinder API and Three-Step Redirect only. NMI offers a free sandbox"
+   ],
+   "api": [
+    "REST + SDK (Python/TS)",
+    "REST Pathfinder API, Collect.js, Three-Step Redirect (per Paygent docs page)"
+   ],
+   "mcp": [
+    "Unclear",
+    "No official MCP found"
+   ],
+   "blocker": [
+    "List hint says NMI-powered Paygent; search surfaced other Paygent products (paygenthq.ai, withpaygent.com, gopaygent.com). Could not confirm which is meant.",
+    "The earlier row described withpaygent.com, a different company (AI usage billing). Paygent Connect appears to be gopaygent.com; auth and onboarding terms are not confirmed from public docs"
+   ],
+   "urls": [
+    "https://docs.withpaygent.com/documentation/getting-started/quick-start",
+    "https://www.gopaygent.com/products/connect;https://www.gopaygent.com/developers/docs;https://support.nmi.com/hc/en-gb/articles/34312649393681-Getting-Started-with-the-NMI-Payment-Gateway"
+   ]
+  }
+ },
+ {
+  "n": 91,
+  "app": "NotebookLM",
+  "result": "Agree",
+  "changes": {
+   "access": [
+    "Preview: personal Google accounts only, Workspace accounts not yet supported; needs Google Cloud project",
+    "Free during Public Preview (rate limits apply). Personal Google accounts only (Workspace accounts get 403); needs a Google Cloud project with the API enabled; the account must have signed in to Gemini Notebook once"
+   ],
+   "mcp": [
+    "Official MCP page (developers.google.com/notebook/docs/mcp)",
+    "Official remote MCP server at notebook.googleapis.com/mcp"
+   ],
+   "urls": [
+    "https://developers.google.com/notebook/docs/authentication;https://developers.google.com/notebook/docs;https://developers.google.com/notebook/docs/mcp",
+    "https://developers.google.com/notebook/docs/authentication;https://developers.google.com/notebook/docs;https://developers.google.com/notebook/docs/mcp;https://developers.google.com/notebook/docs/rate-limits"
+   ]
+  }
+ }
+]
